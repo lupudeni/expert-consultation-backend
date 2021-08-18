@@ -1,6 +1,7 @@
 package ro.code4.expertconsultation.organization.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,11 @@ import java.util.List;
 @RequestMapping("/api/organizations")
 @RequiredArgsConstructor
 public class OrganizationController {
+
+    @Autowired
     private final OrganizationService organizationService;
+
+    @Autowired
     private final UserService userService;
 
     @PostMapping

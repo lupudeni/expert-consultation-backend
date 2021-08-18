@@ -1,6 +1,7 @@
 package ro.code4.expertconsultation.document.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -25,9 +26,17 @@ import static ro.code4.expertconsultation.document.repository.DocumentPredicateF
 @Service
 @RequiredArgsConstructor
 public class DocumentServiceImpl implements DocumentService {
+
+    @Autowired
     private final DocumentRepository documentRepository;
+
+    @Autowired
     private final DocumentBlockRepository documentBlockRepository;
+
+    @Autowired
     private final DocumentBlockMapper documentBlockMapper;
+
+    @Autowired
     private final DocumentMapper documentMapper;
 
     @Transactional

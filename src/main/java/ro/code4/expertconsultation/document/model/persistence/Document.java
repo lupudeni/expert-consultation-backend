@@ -16,8 +16,10 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class Document extends Identifiable {
+
     @Enumerated(EnumType.STRING)
     private DocumentType type;
+
     @Enumerated(EnumType.STRING)
     private DocumentState state;
     private String title;

@@ -11,6 +11,7 @@ import java.util.List;
 @RequestMapping("/api/documents/{documentId}/blocks")
 @RequiredArgsConstructor
 public class DocumentBlockController {
+
     private final DocumentBlockService documentBlockService;
 
     @GetMapping

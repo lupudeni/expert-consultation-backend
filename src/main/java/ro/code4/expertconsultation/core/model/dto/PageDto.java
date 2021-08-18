@@ -13,10 +13,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PageDto<T> {
+
     List<T> content;
 
     private Integer totalPages;
+
     private Long totalElements;
+
     private PageableDto pageable;
 
     public PageDto(Page<T> page) {

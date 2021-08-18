@@ -15,11 +15,17 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class User extends Identifiable {
+
     private String name;
+
     private String email;
+
     private String phoneNumber;
+
     private String profilePictureUrl;
+
     private String password;
+
     @ManyToOne(fetch = FetchType.LAZY)
     private Organization organization;
 }

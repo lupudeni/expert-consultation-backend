@@ -28,10 +28,13 @@ import ro.code4.expertconsultation.authentication.service.impl.CustomUserDetails
         prePostEnabled = true  // for @PreAuthorize("hasRole('role'))/@PostAuthorize
 )
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
     private static final String[] PERMIT_ALL = new String[]{};
 
     private final CustomUserDetailsService customUserDetailsService;
+
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
+
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
     @Override
@@ -66,12 +69,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(customUserDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder());
+
         return authProvider;
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) {
-
         auth.authenticationProvider(authenticationProvider());
     }
 
@@ -80,5 +83,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
-
 }

@@ -15,7 +15,9 @@ import java.util.Collections;
 public class UserPrincipal implements UserDetails {
 
     private final Long id;
+
     private final String email;
+
     @JsonIgnore
     private final String password;
 

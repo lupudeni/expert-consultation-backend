@@ -17,11 +17,11 @@ import ro.code4.expertconsultation.authentication.service.AuthenticationService;
 public class AuthenticationServiceImpl implements AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
+
     private final JwtTokenProvider tokenProvider;
 
     @Override
     public ResponseEntity<JwtAuthenticationResponse> login(LoginRequest loginRequest) {
-
 
         final Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
@@ -29,7 +29,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         final String jwt = tokenProvider.generateToken(authentication);
-        return ResponseEntity.ok(new JwtAuthenticationResponse(jwt));
 
+        return ResponseEntity.ok(new JwtAuthenticationResponse(jwt));
     }
 }

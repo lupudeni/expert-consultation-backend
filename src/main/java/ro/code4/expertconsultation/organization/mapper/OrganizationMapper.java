@@ -6,6 +6,7 @@ import ro.code4.expertconsultation.organization.model.persistence.Organization;
 
 @Mapper(componentModel = "spring")
 public interface OrganizationMapper {
+
     Organization map(OrganizationDto organizationDto);
 
     OrganizationDto map(Organization organization);

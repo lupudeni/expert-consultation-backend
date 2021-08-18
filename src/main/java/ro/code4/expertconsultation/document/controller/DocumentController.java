@@ -14,6 +14,7 @@ import ro.code4.expertconsultation.document.service.DocumentService;
 @RequestMapping("/api/documents")
 @RequiredArgsConstructor
 public class DocumentController {
+
     private final DocumentService documentService;
 
     @PostMapping
@@ -25,6 +26,7 @@ public class DocumentController {
     public PageDto<DocumentListDto> list(final DocumentFilter documentFilter,
                                          final Pageable pageable) {
         final Page<DocumentListDto> documentDtosPage = documentService.list(documentFilter, pageable);
+
         return new PageDto<>(documentDtosPage);
     }
 

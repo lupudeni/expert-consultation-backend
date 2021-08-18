@@ -6,7 +6,9 @@ import java.util.List;
 
 @Getter
 public class I18nMessage {
+
     private final String i18nKey;
+
     private final List<String> i18nArgs;
 
     public I18nMessage(final String i18nKey, List<String> i18nArgs) {

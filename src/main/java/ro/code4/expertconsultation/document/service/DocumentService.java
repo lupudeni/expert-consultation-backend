@@ -7,6 +7,7 @@ import ro.code4.expertconsultation.document.model.dto.DocumentDto;
 import ro.code4.expertconsultation.document.model.dto.DocumentListDto;
 
 public interface DocumentService {
+
     DocumentDto create(DocumentDto documentDto);
 
     DocumentDto get(Long documentId);

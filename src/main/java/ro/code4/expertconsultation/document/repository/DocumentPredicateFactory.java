@@ -5,7 +5,10 @@ import com.querydsl.core.types.Predicate;
 import ro.code4.expertconsultation.document.model.DocumentFilter;
 import ro.code4.expertconsultation.document.model.persistence.QDocument;
 
+import java.util.Objects;
+
 public class DocumentPredicateFactory {
+
     private DocumentPredicateFactory() {
     }
 
@@ -13,17 +16,13 @@ public class DocumentPredicateFactory {
         final QDocument document = QDocument.document;
         final BooleanBuilder whereFilter = new BooleanBuilder();
 
-        if (filter.getType() != null) {
-            whereFilter.and(document.type.eq(filter.getType()));
-        }
+        Objects.requireNonNull(filter.getState());
+        Objects.requireNonNull(filter.getTitle());
+        Objects.requireNonNull(filter.getType());
 
-        if (filter.getState() != null) {
-            whereFilter.and(document.state.eq(filter.getState()));
-        }
-
-        if (filter.getTitle() != null) {
-            whereFilter.and(document.title.likeIgnoreCase("%" + filter.getTitle() + "%"));
-        }
+        whereFilter.and(document.type.eq(filter.getType()));
+        whereFilter.and(document.state.eq(filter.getState()));
+        whereFilter.and(document.title.likeIgnoreCase("%" + filter.getTitle() + "%"));
 
         return whereFilter;
     }

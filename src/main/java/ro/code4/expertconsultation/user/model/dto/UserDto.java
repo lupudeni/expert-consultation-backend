@@ -7,8 +7,12 @@ import ro.code4.expertconsultation.core.model.dto.IdentifiableDto;
 @Getter
 @Setter
 public class UserDto extends IdentifiableDto {
+
     private String name;
+
     private String email;
+
     private String phoneNumber;
+
     private String profilePictureUrl;
 }
