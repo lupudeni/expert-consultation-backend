@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PageableDto {
+
     private Integer pageSize;
+
     private Integer pageNumber;
 }

@@ -10,7 +10,10 @@ import java.util.Map;
 @Getter
 @Setter
 public class ExpertConsultationExceptionResponse {
+
     private List<I18nMessage> errors;
+
     private Map<String, I18nMessage> fieldErrors;
+
     private String additionalInfo;
 }

@@ -10,7 +10,6 @@ import java.util.Collections;
 @Getter
 public class CurrentUser extends org.springframework.security.core.userdetails.User {
 
-
     public CurrentUser(final String username,
                        final String password,
                        final Collection<? extends GrantedAuthority> authorities) {

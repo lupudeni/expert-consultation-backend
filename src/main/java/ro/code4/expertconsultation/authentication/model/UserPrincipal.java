@@ -14,10 +14,12 @@ import java.util.Collections;
 @AllArgsConstructor
 public class UserPrincipal implements UserDetails {
 
-    private Long id;
-    private String email;
+    private final Long id;
+
+    private final String email;
+
     @JsonIgnore
-    private String password;
+    private final String password;
 
     public static UserPrincipal create(final User user) {
         return new UserPrincipal(user.getId(), user.getEmail(), user.getPassword());
@@ -26,11 +28,6 @@ public class UserPrincipal implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Collections.emptyList();
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
     }
 
     @Override

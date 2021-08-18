@@ -15,15 +15,25 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class Organization extends Identifiable {
+
     @Enumerated(EnumType.STRING)
     private OrganizationCategory category;
+
     private String name;
+
     private String email;
+
     private String phoneNumber;
+
     private String website;
+
     private String address;
+
     private String contactPersonName;
+
     private String contactPersonEmail;
+
     private String logoUrl;
+
     private Integer numberOfMembers;
 }

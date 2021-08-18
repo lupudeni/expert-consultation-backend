@@ -5,6 +5,7 @@ import ro.code4.expertconsultation.document.model.dto.DocumentBlockDto;
 import java.util.List;
 
 public interface DocumentBlockService {
+
     List<DocumentBlockDto> list(Long documentId);
 
     DocumentBlockDto create(Long documentId, DocumentBlockDto documentBlockDto);

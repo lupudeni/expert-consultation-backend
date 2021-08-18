@@ -1,8 +1,8 @@
 package ro.code4.expertconsultation.user.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ro.code4.expertconsultation.authentication.model.CurrentUser;
 import ro.code4.expertconsultation.user.model.dto.UserDto;
 import ro.code4.expertconsultation.user.service.UserService;
 
@@ -10,11 +10,12 @@ import ro.code4.expertconsultation.user.service.UserService;
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 public class UserController {
+
+    @Autowired
     private final UserService userService;
 
     @PutMapping("/{id}")
-    public UserDto update(@PathVariable final Long id,
-                          @RequestBody final UserDto userDto) {
+    public UserDto update(@PathVariable final Long id, @RequestBody final UserDto userDto) {
         return userService.update(id, userDto);
     }
 

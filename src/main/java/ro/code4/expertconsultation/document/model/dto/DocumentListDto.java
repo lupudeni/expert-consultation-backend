@@ -9,7 +9,10 @@ import ro.code4.expertconsultation.document.model.DocumentType;
 @Getter
 @Setter
 public class DocumentListDto extends Identifiable {
+
     private DocumentType type;
+
     private DocumentState state;
+
     private String title;
 }

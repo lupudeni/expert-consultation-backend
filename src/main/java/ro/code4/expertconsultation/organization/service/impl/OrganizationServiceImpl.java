@@ -1,6 +1,7 @@
 package ro.code4.expertconsultation.organization.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -24,8 +25,14 @@ import static ro.code4.expertconsultation.organization.repository.OrganizationPr
 @Service
 @RequiredArgsConstructor
 public class OrganizationServiceImpl implements OrganizationService {
+
+    @Autowired
     private final OrganizationRepository organizationRepository;
+
+    @Autowired
     private final OrganizationMapper organizationMapper;
+
+    @Autowired
     private final UserMapper userMapper;
 
     @Transactional

@@ -14,8 +14,10 @@ import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
 public abstract class DocumentBlocksMapper {
+
     @Autowired
     private DocumentRepository documentRepository;
+
     @Autowired
     private DocumentBlockMapper documentBlockMapper;
 

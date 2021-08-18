@@ -11,8 +11,12 @@ import java.util.List;
 @Getter
 @Setter
 public class DocumentDto extends IdentifiableDto {
+
     private DocumentType type;
+
     private DocumentState state;
+
     private String title;
+
     private List<DocumentBlockDto> blocks;
 }

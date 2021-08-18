@@ -7,6 +7,8 @@ import ro.code4.expertconsultation.core.model.dto.IdentifiableDto;
 @Getter
 @Setter
 public class DocumentBlockDto extends IdentifiableDto {
+
     private String content;
+
     private Integer index;
 }

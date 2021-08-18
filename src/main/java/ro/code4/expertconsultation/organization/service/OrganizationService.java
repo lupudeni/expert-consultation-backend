@@ -9,6 +9,7 @@ import ro.code4.expertconsultation.user.model.dto.UserDto;
 import java.util.List;
 
 public interface OrganizationService {
+
     OrganizationDto create(OrganizationDto organizationDto);
 
     OrganizationDto update(Long organisationId, OrganizationDto organizationDto);

@@ -1,6 +1,7 @@
 package ro.code4.expertconsultation.document.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.code4.expertconsultation.document.mapper.DocumentBlockMapper;
@@ -18,8 +19,14 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class DocumentBlockServiceImpl implements DocumentBlockService {
+
+    @Autowired
     private final DocumentBlockRepository documentBlockRepository;
+
+    @Autowired
     private final DocumentRepository documentRepository;
+
+    @Autowired
     private final DocumentBlockMapper documentBlockMapper;
 
     @Transactional(readOnly = true)

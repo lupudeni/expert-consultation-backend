@@ -8,6 +8,7 @@ import ro.code4.expertconsultation.document.model.persistence.Document;
 
 @Mapper(componentModel = "spring", uses = {DocumentBlocksMapper.class})
 public interface DocumentMapper {
+
     Document map(DocumentDto documentDto);
 
     @Mapping(target = "blocks", ignore = true)

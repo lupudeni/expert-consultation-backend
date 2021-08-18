@@ -1,6 +1,7 @@
 package ro.code4.expertconsultation.user.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,9 +19,17 @@ import javax.persistence.EntityNotFoundException;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
+
+    @Autowired
     private final UserRepository userRepository;
+
+    @Autowired
     private final OrganizationRepository organizationRepository;
+
+    @Autowired
     private final PasswordEncoder passwordEncoder;
+
+    @Autowired
     private final UserMapper userMapper;
 
     @PostConstruct

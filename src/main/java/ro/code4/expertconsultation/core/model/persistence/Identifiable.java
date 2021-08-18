@@ -12,7 +12,8 @@ import javax.persistence.MappedSuperclass;
 @Getter
 @Setter
 public abstract class Identifiable {
+
     @Id
-    @GeneratedValue(generator = "sequence", strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 }

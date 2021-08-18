@@ -6,8 +6,8 @@ import ro.code4.expertconsultation.organization.model.OrganizationFilter;
 import ro.code4.expertconsultation.organization.model.persistence.QOrganization;
 
 public class OrganizationPredicateFactory {
-    private OrganizationPredicateFactory() {
 
+    private OrganizationPredicateFactory() {
     }
 
     public static Predicate byFilter(final OrganizationFilter filter) {
