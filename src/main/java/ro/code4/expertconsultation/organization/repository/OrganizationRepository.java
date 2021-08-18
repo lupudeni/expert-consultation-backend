@@ -10,8 +10,7 @@ import ro.code4.expertconsultation.user.model.persistence.User;
 import java.util.List;
 
 @Repository
-public interface OrganizationRepository extends
-        JpaRepository<Organization, Long>, QuerydslPredicateExecutor<Organization> {
+public interface OrganizationRepository extends JpaRepository<Organization, Long>, QuerydslPredicateExecutor<Organization> {
 
     @Query("SELECT u FROM User u where u.organization.id=:organisationId")
     List<User> findOrganizationMembers(Long organisationId);

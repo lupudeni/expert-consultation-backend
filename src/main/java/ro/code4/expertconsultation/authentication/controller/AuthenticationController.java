@@ -15,7 +15,7 @@ import ro.code4.expertconsultation.authentication.service.AuthenticationService;
 @AllArgsConstructor
 public class AuthenticationController {
 
-    private AuthenticationService authenticationService;
+    private final AuthenticationService authenticationService;
 
     //todo create valid annotation
     @PostMapping("/login")

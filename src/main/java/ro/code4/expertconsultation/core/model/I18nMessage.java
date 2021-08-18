@@ -1,6 +1,7 @@
 package ro.code4.expertconsultation.core.model;
 
 import lombok.Getter;
+
 import java.util.List;
 
 @Getter

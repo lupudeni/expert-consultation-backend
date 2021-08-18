@@ -2,7 +2,6 @@ package ro.code4.expertconsultation.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ro.code4.expertconsultation.authentication.model.CurrentUser;
 import ro.code4.expertconsultation.user.model.dto.UserDto;
 import ro.code4.expertconsultation.user.service.UserService;
 
